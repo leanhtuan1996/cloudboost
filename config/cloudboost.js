@@ -1,12 +1,6 @@
 module.exports = {
     "mongo": [{
-        "host": "shard11",
-        "port": "27017"
-    }, {
-        "host": "shard12",
-        "port": "27017"
-    }, {
-        "host": "shard13",
+        "host": "localhost",
         "port": "27017"
     }],
     "elasticsearch": [{
@@ -14,7 +8,7 @@ module.exports = {
         "port": "9200"
     }],
     "redis": [{
-        "host": "redis",
+        "host": "localhost",
         "port": 6379
     }]
 }
