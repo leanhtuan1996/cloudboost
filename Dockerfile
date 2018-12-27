@@ -33,7 +33,7 @@ RUN echo 'module.exports = { \n\
         "host": "'${REDIS_HOST}'", \n\
         "port": "'${REDIS_PORT}'" \n\
     }] \n\
-}' > ./config/cloudboost.json
+}' > ./config/cloudboost.js
 
 RUN echo 'module.exports = { \n\
   "provider"  : "'${SMTP_PROVIDER}'", \n\
