@@ -11,6 +11,8 @@ ENV SMTP_APIKEY XXXXXXXXXXXXXXXXXXXXXXX
 ENV SMTP_DOMAIN letuan.info
 ENV SMTP_FROM_EMAIL contact@letuan.info
 ENV SMTP_FROM_NAME Justin
+ENV ELASTICSEARCH_HOST elasticsearch
+ENV ELASTICSEARCH_PORT 9200
 
 RUN mkdir -p /usr/src/app
 
@@ -44,4 +46,7 @@ RUN echo 'module.exports = { \n\
 }' > ./config/smtp.js
 
 RUN npm install
-RUN node server.js
+
+EXPOSE 4730
+
+CMD [ "node", "server.js" ]
