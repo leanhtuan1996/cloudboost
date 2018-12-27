@@ -20,6 +20,8 @@ RUN git clone https://github.com/leanhtuan1996/cloudboost
 
 WORKDIR /usr/src/app/cloudboost
 
+RUN touch ./config/cloudboost.json
+
 RUN echo 'module.exports = { \n\
     "mongo": [{ \n\
         "host": "'${MONGO_HOST}'", \n\
@@ -34,6 +36,8 @@ RUN echo 'module.exports = { \n\
         "port": "'${REDIS_PORT}'" \n\
     }] \n\
 }' > ./config/cloudboost.json
+
+RUN touch ./config/smtp.js
 
 RUN echo 'module.exports = { \n\
   "provider"  : "'${SMTP_PROVIDER}'", \n\
